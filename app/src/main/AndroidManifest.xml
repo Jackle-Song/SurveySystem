@@ -12,8 +12,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SurveySystem"
         tools:targetApi="31">
+        <activity android:name=".activity.SurveyDashboardActivity" android:exported="true" android:screenOrientation="portrait"/>
         <activity
-            android:name=".MainActivity"
+            android:name=".activity.AuthenticationActivity"
+            android:screenOrientation="portrait"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

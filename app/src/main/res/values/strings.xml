@@ -1,3 +1,22 @@
 <resources>
     <string name="app_name">SurveySystem</string>
+
+    <!--Auth Activity-->
+    <string name="auth_activity_login_text">Login</string>
+    <string name="auth_activity_signup_text">Sign Up</string>
+    <string name="auth_activity_login_email_username_text">Email</string>
+    <string name="auth_activity_login_password_text">Password</string>
+    <string name="auth_activity_do_not_have_account_text">Don\'t have an account?</string>
+    <string name="auth_activity_already_have_account_text">Already have an account?</string>
+    <string name="auth_activity_login_successful_text">Login successful!</string>
+    <string name="auth_activity_login_failed_text">Login failed! Please try again later</string>
+    <string name="auth_activity_sign_up_successful_text">Registration successful!</string>
+    <string name="auth_activity_sign_up_failed_text">Registration failed! Please try again later</string>
+    <string name="auth_activity_sign_up_email_error_text">Invalid email format</string>
+    <string name="auth_activity_sign_up_password_error_text">Password must contain at least one special character, one letter and one number, 8–16 length</string>
+
+    <!--Survey Dashboard-->
+    <string name="survey_dashboard_title">Dashboard</string>
+    <string name="survey_dashboard_create_survey_text">Create Survey</string>
+    <string name="survey_dashboard_view_report_text">View Report</string>
 </resources>

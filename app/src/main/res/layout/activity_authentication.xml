@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.AuthenticationActivity">
+
+    <LinearLayout
+        android:padding="24dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:src="@drawable/logo"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="240dp"
+            android:contentDescription="@null"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilOutlinedEmailTextField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:hint="@string/auth_activity_login_email_username_text"
+            app:boxStrokeColor="@color/pink_purple_e0"
+            app:hintTextColor="@color/light_grey_a5"
+            android:textColorHint="@color/light_grey_a5"
+            app:errorEnabled="true"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etEditTextEmail"
+                android:textColor="@color/black_32"
+                android:maxLines="1"
+                android:lines="1"
+                android:textSize="14sp"
+                android:fontFamily="@font/poppins_medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilOutlinedPasswordTextField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="@string/auth_activity_login_password_text"
+            app:hintTextColor="@color/light_grey_a5"
+            android:textColorHint="@color/light_grey_a5"
+            app:boxStrokeColor="@color/pink_purple_e0"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="@color/pink_purple_e0"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etEditTextPassword"
+                android:inputType="textPassword"
+                android:textColor="@color/black_32"
+                android:fontFamily="@font/poppins_medium"
+                android:maxLines="1"
+                android:lines="1"
+                android:textSize="14sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnAuthenticationLoginSignUp"
+            android:text="@string/auth_activity_login_text"
+            android:textColor="@color/white"
+            android:fontFamily="@font/poppins_bold"
+            android:background="@drawable/bg_button_pink_purple_radius"
+            app:backgroundTint="@null"
+            android:layout_marginTop="24dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutUserOptionsText"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/txtAccountExistedQuestion"
+            android:text="@string/auth_activity_do_not_have_account_text"
+            android:textSize="12sp"
+            android:textColor="@color/black_32"
+            android:fontFamily="@font/poppins_regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/txtLoginSignUp"
+            android:text="@string/auth_activity_signup_text"
+            android:textSize="12sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppins_bold"
+            android:layout_marginStart="4dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+    
+</RelativeLayout>
