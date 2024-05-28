@@ -40,6 +40,9 @@ android {
 }
 
 dependencies {
+    //gson
+    implementation (libs.gson)
+
     //firebase database
     implementation (libs.firebase.database)
 

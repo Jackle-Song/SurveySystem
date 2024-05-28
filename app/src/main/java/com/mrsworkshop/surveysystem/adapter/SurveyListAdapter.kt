@@ -13,7 +13,12 @@ import com.mrsworkshop.surveysystem.model.SurveyData
 class SurveyListAdapter(
     private val mContext : Context,
     private val surveyList : MutableList<SurveyData>?,
+    private val mListener : SurveyListInterface
 ) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+
+    interface SurveyListInterface {
+        fun viewSurveyDetails(surveyData: SurveyData)
+    }
 
     class SurveyDetailsViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView) {
         val cardViewSurveyItem : CardView = itemView.findViewById(R.id.cardViewSurveyItem)
@@ -34,6 +39,12 @@ class SurveyListAdapter(
         val surveyViewHolder = holder as SurveyDetailsViewHolder
 
         surveyViewHolder.txtSurveyTitle.text = surveyItem?.title
+
+        surveyViewHolder.cardViewSurveyItem.setOnClickListener {
+            if (surveyItem != null) {
+                mListener.viewSurveyDetails(surveyItem)
+            }
+        }
     }
 
 }

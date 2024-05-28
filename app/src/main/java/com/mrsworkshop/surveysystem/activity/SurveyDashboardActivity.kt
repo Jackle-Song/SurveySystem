@@ -10,11 +10,17 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
+import com.google.gson.Gson
 import com.mrsworkshop.surveysystem.adapter.SurveyListAdapter
 import com.mrsworkshop.surveysystem.databinding.ActivitySurveyDashboardBinding
 import com.mrsworkshop.surveysystem.model.SurveyData
 
-class SurveyDashboardActivity : BaseActivity() {
+class SurveyDashboardActivity : BaseActivity(), SurveyListAdapter.SurveyListInterface {
+
+    companion object {
+        const val INTENT_SURVEY_DETAILS = "surveyDetails"
+    }
+
     private lateinit var binding: ActivitySurveyDashboardBinding
     private lateinit var database: DatabaseReference
     private lateinit var surveyListAdapter: SurveyListAdapter
@@ -33,6 +39,12 @@ class SurveyDashboardActivity : BaseActivity() {
         setupComponentListener()
     }
 
+    override fun viewSurveyDetails(surveyData: SurveyData) {
+        val intent = Intent(this@SurveyDashboardActivity, SurveyResponseActivity::class.java)
+        intent.putExtra(INTENT_SURVEY_DETAILS, Gson().toJson(surveyData))
+        startActivity(intent)
+    }
+
     /**
      * private function
      */
@@ -46,7 +58,7 @@ class SurveyDashboardActivity : BaseActivity() {
 
 
     private fun initUI() {
-        surveyListAdapter = SurveyListAdapter(this@SurveyDashboardActivity, surveyList)
+        surveyListAdapter = SurveyListAdapter(this@SurveyDashboardActivity, surveyList, this@SurveyDashboardActivity)
         binding.recyclerviewSurveyList.layoutManager = LinearLayoutManager(this)
         binding.recyclerviewSurveyList.adapter = surveyListAdapter
     }

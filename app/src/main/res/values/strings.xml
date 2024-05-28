@@ -39,4 +39,8 @@
         <item>Subang Jaya</item>
         <item>Puchong</item>
     </string-array>
+
+    <!--Survey Details-->
+    <string name="survey_details_name_text">Name</string>
+    <string name="survey_details_age_text">Age</string>
 </resources>

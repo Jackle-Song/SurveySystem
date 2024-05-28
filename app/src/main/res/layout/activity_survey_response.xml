@@ -1,10 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/white"
+    android:padding="16dp"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <LinearLayout
+        android:layout_above="@+id/btnSaveAndSubmit"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
+        <TextView
+            android:id="@+id/txtSurveyTitle"
+            android:textSize="16sp"
+            android:textColor="@color/black_32"
+            android:fontFamily="@font/poppins_bold"
+            android:layout_marginBottom="8dp"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
 
-</LinearLayout>
+        <EditText
+            android:id="@+id/etSurveyName"
+            android:textColor="@color/black_32"
+            android:textColorHint="@color/light_grey_a5"
+            android:textSize="16sp"
+            android:fontFamily="@font/poppins_regular"
+            android:inputType="text"
+            android:autofillHints="@null"
+            android:hint="@string/survey_details_name_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/etSurveyAge"
+            android:textColor="@color/black_32"
+            android:textColorHint="@color/light_grey_a5"
+            android:textSize="16sp"
+            android:fontFamily="@font/poppins_regular"
+            android:inputType="number"
+            android:autofillHints="@null"
+            android:hint="@string/survey_details_age_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="@string/create_survey_outlet_text"
+                android:textSize="16sp"
+                android:fontFamily="@font/poppins_bold"
+                android:textColor="@color/black_32"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <Spinner
+                android:id="@+id/spinnerOutlet"
+                android:textColor="@color/black_32"
+                android:popupBackground="@color/white"
+                android:dropDownWidth="200dp"
+                android:layout_marginStart="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/layoutSurveyQuestions"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSaveAndSubmit"
+        android:text="@string/create_survey_save_and_submit_text"
+        android:textColor="@color/black_32"
+        android:fontFamily="@font/poppins_bold"
+        android:background="@drawable/bg_button_border_radius"
+        app:backgroundTint="@null"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</RelativeLayout>

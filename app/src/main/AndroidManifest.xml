@@ -12,6 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SurveySystem"
         tools:targetApi="31">
+        <activity android:name=".activity.SurveyResponseActivity" android:exported="true" android:screenOrientation="portrait"/>
         <activity android:name=".activity.CreateSurveyActivity" android:exported="true" android:screenOrientation="portrait"/>
         <activity android:name=".activity.SurveyDashboardActivity" android:exported="true" android:screenOrientation="portrait"/>
         <activity
