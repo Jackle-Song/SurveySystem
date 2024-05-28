@@ -22,12 +22,13 @@
             android:layout_height="wrap_content"/>
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnAuthenticationLoginSignUp"
+            android:id="@+id/btnCreateSurvey"
             android:text="@string/survey_dashboard_create_survey_text"
             android:textColor="@color/white"
             android:fontFamily="@font/poppins_bold"
             app:icon="@drawable/ic_add_icon"
             app:iconGravity="textEnd"
+            app:iconTint="@color/white"
             android:background="@drawable/bg_button_pink_purple_radius"
             app:backgroundTint="@null"
             android:gravity="center"

@@ -8,6 +8,7 @@ import android.util.Patterns
 import android.widget.Toast
 import androidx.activity.OnBackPressedCallback
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.FirebaseDatabase
 import com.mrsworkshop.surveysystem.R
 import com.mrsworkshop.surveysystem.databinding.ActivityAuthenticationBinding
 
@@ -29,6 +30,8 @@ class AuthenticationActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityAuthenticationBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        FirebaseDatabase.getInstance().setPersistenceEnabled(true)
 
         mAuth = FirebaseAuth.getInstance()
         if (mAuth.currentUser != null) {
@@ -198,6 +201,7 @@ class AuthenticationActivity : BaseActivity() {
 
                     val intent = Intent(this@AuthenticationActivity, SurveyDashboardActivity::class.java)
                     startActivity(intent)
+                    finish()
                 } else {
                     Toast.makeText(this@AuthenticationActivity, getString(R.string.auth_activity_sign_up_failed_text), Toast.LENGTH_LONG).show()
                     dismissLoadingViewDialog()
@@ -214,6 +218,7 @@ class AuthenticationActivity : BaseActivity() {
 
                     val intent = Intent(this@AuthenticationActivity, SurveyDashboardActivity::class.java)
                     startActivity(intent)
+                    finish()
                 } else {
                     Toast.makeText(this@AuthenticationActivity, getString(R.string.auth_activity_login_failed_text), Toast.LENGTH_LONG).show()
                     dismissLoadingViewDialog()

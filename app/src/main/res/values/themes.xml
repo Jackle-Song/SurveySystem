@@ -3,11 +3,18 @@
     <style name="Base.Theme.SurveySystem" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="android:statusBarColor">@color/white</item> <!-- Set status bar color to white -->
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
     </style>
 
     <style name="Theme.SurveySystem" parent="Base.Theme.SurveySystem" />
 
     <style name="ContentLoadingProgress" parent="Base.Theme.SurveySystem">
         <item name="colorAccent">@color/light_grey_a5</item>
+    </style>
+
+    <style name="AppTheme.PopupOverlay" parent="Base.Theme.SurveySystem">
+        <item name="android:padding">8dp</item>
+        <item name="android:textColor">@color/black_32</item>
     </style>
 </resources>

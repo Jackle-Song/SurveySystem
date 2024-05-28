@@ -19,4 +19,24 @@
     <string name="survey_dashboard_title">Dashboard</string>
     <string name="survey_dashboard_create_survey_text">Create Survey</string>
     <string name="survey_dashboard_view_report_text">View Report</string>
+
+    <!--Create Survey-->
+    <string name="create_survey_title_text">Title : </string>
+    <string name="create_survey_title_hint_text">survey title</string>
+    <string name="create_survey_outlet_text">Outlet : </string>
+    <string name="create_survey_questions_text">Questions : </string>
+    <string name="create_survey_save_and_submit_text">Save &amp; Submit</string>
+    <string name="create_survey_add_option_text">Add Option</string>
+    <string name="create_survey_question_hint_text">question title</string>
+    <string name="create_survey_option_hint_text">option title</string>
+    <string name="create_survey_save_text">Save</string>
+    <string name="create_survey_add_question_text">Add Question</string>
+
+    <string-array name="Outlet">
+        <item>Kuala Lumpur</item>
+        <item>Johor Bahru</item>
+        <item>Penang</item>
+        <item>Subang Jaya</item>
+        <item>Puchong</item>
+    </string-array>
 </resources>

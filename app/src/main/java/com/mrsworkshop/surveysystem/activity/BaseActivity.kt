@@ -1,9 +1,11 @@
 package com.mrsworkshop.surveysystem.activity
 
+import android.os.Bundle
 import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.core.view.WindowCompat
+import com.google.firebase.database.FirebaseDatabase
 import com.mrsworkshop.surveysystem.component.LoadingDialog
 
 open class BaseActivity : AppCompatActivity() {
